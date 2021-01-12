@@ -1,13 +1,51 @@
-@import "~normalize.css";
+@import '~normalize.css';
 
-@import "_variables";
-@import "modules/hello.scss";
+@import '_variables';
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+    background: $wtf;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.section {
+    width: 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cigarettesArea {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-grow: 0;
+
+    &__img {
+        width: 72px;
+    }
+}
+
+.cigarettesPackageArea__img {
+    width: 72px;
+}
+
+.cigarettes-animation {
+    animation: pulse 0.8s linear 0s alternate 6;
 }
